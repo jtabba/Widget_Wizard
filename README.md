@@ -2,6 +2,9 @@
 # Widget Wizard
 Widget Wizard is an application which a user can set as their home page to allow the immediate access of various widgets. All widgets possess their own unique functionality and provide the users with tools and information which are conveniently and immediately accessible without navigating to other web pages.
 
+### Widget Wizard link
+Widget Wizard can be accessed here: https://widget-wizard.herokuapp.com/
+
 ## Features
 Widget Wizard integrates a minimalistic interface with an animated side bar that holds all the widgets. Clicking the top right menu opens the widget dock and allows access to the widgets.
 
@@ -23,9 +26,6 @@ The current widget list includes a:
 
 ![Home Interface](https://github.com/jtabba/Widget_app/blob/main/client/images/README_images/widgets_resized.jpeg)
 
-
-### Widget Wizard link
-Widget Wizard can be accessed here: https://widget-wizard.herokuapp.com/
 
 # Development of back-end and front-end functionality
 Widget Wizard was a collaborative project with 4 team members. Each member was self-assigned to and involved in different aspects of its development. 
