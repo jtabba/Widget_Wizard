@@ -26,7 +26,7 @@ The current widget list includes a:
 
 
 # Development of back-end and front-end functionality
-Widget Wizard was a collaborative project with 4 team members. Each member was self-assigned to and involved in different aspects of its development. 
+Widget Wizard was a collaborative project with 4 team members built over the course of 4 days. Each member was self-assigned to and involved in different aspects of its development. 
 
 A Trello board was used to create and organise the workflow of the project. A huge benefit of organising work in this manner was that tasks were easily planned and saved for team members to move on to once one task was complete.
 
