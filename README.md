@@ -8,8 +8,6 @@ Widget Wizard can be accessed here: https://widget-wizard.herokuapp.com/
 ## Features
 Widget Wizard integrates a minimalistic interface with an animated side bar that holds all the widgets. Clicking the top right menu opens the widget dock and allows access to the widgets.
 
-
-
 ![Home Interface](https://github.com/jtabba/Widget_app/blob/main/client/images/README_images/interface_resized.jpeg)
 
 Through the widget dock users can also access the login and sign up features. Signing up and logging in enables the grid layout to be saved to where ever the logged in user has positioned them on the interface.
@@ -29,6 +27,10 @@ The current widget list includes a:
 
 # Development of back-end and front-end functionality
 Widget Wizard was a collaborative project with 4 team members. Each member was self-assigned to and involved in different aspects of its development. 
+
+A Trello board was used to create and organise the workflow of the project. A huge benefit of organising work in this manner was that tasks were easily planned and saved for team members to move on to once one task was complete.
+
+![Home Interface](https://github.com/jtabba/Widget_app/blob/main/client/images/README_images/trello_resized.jpeg)
 
 
 ## Widget application development 
