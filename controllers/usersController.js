@@ -16,11 +16,13 @@ if (process.env.PRODUCTION) {
   })
 }
 
-
-
-function userLoggedIn(req, res) {
+function loggedInUser(req, res) {
     //return the session user ID.
-    res.json({loggedInUserId: req.session.user_id})
+    pool.query('SELECT * FROM users Where id = $1;', [req.session.user_id], (err, db) => {
+        if (db.rows.length>0) {
+            res.json({name: db.rows[0].first_name})
+        }
+    })
 }
 
 function newSession(req, res) {
@@ -43,20 +45,6 @@ function newSession(req, res) {
 }
 
 function endSession(req, res) {
-
-    // // delete previous widget entry in database
-    // pool.query('DELETE FROM userWidgets WHERE id = $1', [req.session.user_id], () => {
-    //     //return message if needed
-    //     // res.json({ message: `deleted`})
-    // })
-
-    // // add new widgets entry to save the current loaded widgets
-    // pool.query(
-    //     'INSERT INTO userWidgets (user_id, widgets) VALUES($1, $2)', [req.session.user_id, req.body.widgets], (err, db) =>{
-    //         //return something if we like
-    //     }
-    // )
-
     //destroy the session
     req.session.destroy()
 }
@@ -98,7 +86,7 @@ function createUsersWidgets(req, res) {
 }
 
 module.exports = {
-    userLoggedIn,
+    loggedInUser,
     newSession,
     endSession,
     createUser,

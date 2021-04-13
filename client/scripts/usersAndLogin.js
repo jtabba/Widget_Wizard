@@ -172,7 +172,8 @@ function displayIncompleteSignupMessage() {
 
 function currentUser() {
     axios.get('/api/sessions',{}).then(res => {
-        console.log('current user id is ' + res.data.loggedInUserId)
+            console.log('current user id is ' + res.data.name)
+            // return res.data.loggedInUserId
     })
 }
  
@@ -183,6 +184,25 @@ function getUserWidgets() {
 }
 
 
+////////////////////////////// Check the if there is already a session user_id and reload the wigets for that session. Ie. The user might have reloaded the page without logging out.. So we need to reload the widgets.
+
+// if (currentUser()) {
+//     console.log("there is a current user")
+//     displayWelcomeUser(res.data.name)
+//     loadUserWidgets()
+// } else {
+//     console.log("no current user")
+// }
 
 
+function loadAlreadyLoggedInState() {
+    // used if the page is reloaded without logging out. If there's a session user_id already, then load the user widgets for that user_id
+    axios.get('/api/sessions',{}).then(res => {
+        if (res.data.name) {
+            displayWelcomeUser(res.data.name)
+            loadUserWidgets()
+        }
+    })
+}
 
+loadAlreadyLoggedInState()

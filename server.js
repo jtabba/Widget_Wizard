@@ -23,7 +23,7 @@ app.listen(port, () => {
 })
 
 
-app.get('/api/sessions', usersController.userLoggedIn)
+app.get('/api/sessions', usersController.loggedInUser)
 app.post('/api/sessions', usersController.newSession)
 app.delete('/api/sessions', usersController.endSession)
 
